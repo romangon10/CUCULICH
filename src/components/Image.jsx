@@ -1,0 +1,2 @@
+import { useState } from 'react';
+export default function Image({src,alt,className='',eager=false,contain=false}){const [failed,setFailed]=useState(false);return failed?<div className={'image-fallback '+className} role="img" aria-label={alt+' — imagen no disponible'}>Imagen no disponible</div>:<img src={src} alt={alt} loading={eager?'eager':'lazy'} decoding="async" className={className} style={{objectFit:contain?'contain':'cover'}} onError={()=>setFailed(true)}/>}
