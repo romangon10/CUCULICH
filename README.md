@@ -1,17 +1,81 @@
 # CUCULICH
 
-Página de marca en negro y dorado, reconstruida a partir de los componentes compartidos por su propietario. React + Vite, sin autenticación ni SDK de Base44.
+![React](https://img.shields.io/badge/React-18-20232A?logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?logo=framer&logoColor=white)
+![Build](https://github.com/romangon10/CUCULICH/actions/workflows/quality.yml/badge.svg)
 
-## Desarrollo
+A premium fashion experience with a **black-and-gold visual identity**, editorial composition and fluid interactions. Built with React and Vite as a portfolio-ready frontend.
 
-Requiere Node.js 22. Ejecutar `npm install` y `npm run dev`. Para compilar: `npm run build`. La salida está en `dist/`; `npm run preview` permite revisarla.
+## Highlights
 
-## Alcance
+- Responsive hero, collection, manifesto and atelier sections.
+- Interactive product collection with local selection drawer.
+- Dedicated presentation for a reversible coat and its two visual identities.
+- Motion and transitions powered by Framer Motion.
+- Component-based React structure with centralized visual tokens.
+- Automated production-build verification through GitHub Actions.
 
-Incluye portada, colección, manifiesto, campera reversible, navegación y pie de página. El carrito es una selección local sin pagos, pedidos ni reserva de stock. Las imágenes siguen alojadas en media.base44.com; conservar copias autorizadas y migrarlas antes de depender de otro alojamiento. No es una exportación completa del backend de Base44.
+## Technology
 
-Los productos y textos de colección son demostrativos. Confirmar materiales, disponibilidad, precios, talles y contactos antes de vender. El correo y teléfono de ejemplo no se publican como contactos válidos.
+| Area | Tools |
+| --- | --- |
+| Interface | React 18, JSX |
+| Build | Vite 6 |
+| Motion | Framer Motion |
+| Icons | Lucide React |
+| Styling | CSS, responsive layout, design tokens |
+| Quality | Automated production build on every push and pull request |
 
-## Publicación
+## Run locally
 
-Guardar el código en GitHub no publica la tienda. Usar un proveedor de alojamiento compatible con sitios comerciales, con comando `npm run build` y directorio `dist`. No se configura GitHub Pages para comercio electrónico. Un dominio propio es opcional y se contrata por separado.
+Requires **Node.js 22 or later**.
+
+```sh
+git clone https://github.com/romangon10/CUCULICH.git
+cd CUCULICH
+npm install
+npm run dev
+```
+
+Open the local URL shown by Vite.
+
+## Verify a production build
+
+```sh
+npm run build
+npm run preview
+```
+
+The optimized output is generated in `dist/`. GitHub Actions runs the build automatically on changes to `main` and on pull requests.
+
+## Project structure
+
+| Path | Responsibility |
+| --- | --- |
+| `src/pages/Home.jsx` | Main page composition and selection state |
+| `src/components/Collection.jsx` | Product catalogue and interactions |
+| `src/components/ReversibleCoat.jsx` | Reversible garment presentation |
+| `src/components/SelectionDrawer.jsx` | Local product selection experience |
+| `src/components/Hero.jsx` | Brand introduction |
+| `src/components/Manifesto.jsx` | Editorial brand narrative |
+| `src/theme.css` | Design tokens and visual system |
+| `src/index.css` | Layout, responsive behavior and component styling |
+
+## Scope
+
+This repository is a frontend portfolio project. The selection drawer is local and does not process payments, create real orders or reserve stock. Product information and contact details must be validated before commercial use.
+
+Images currently depend on external hosting. Production use should migrate authorized assets to controlled storage and add a real commerce backend, authentication, inventory and payment integration.
+
+## Roadmap
+
+- Automated interaction and accessibility tests
+- Owned image hosting and optimized responsive assets
+- Product detail routes
+- Real inventory and checkout integration
+- Production deployment with a custom domain
+
+## Author
+
+Created by [Roman Nicolas Gonzalez](https://github.com/romangon10) · [LinkedIn](https://www.linkedin.com/in/romannicolasgonzalez/)
